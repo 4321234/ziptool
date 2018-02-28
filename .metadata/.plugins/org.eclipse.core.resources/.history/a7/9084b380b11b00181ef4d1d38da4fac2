@@ -1,0 +1,19 @@
+package pl.mir;
+
+import java.io.File;
+
+
+public class LOGGER {
+	
+	private String file_name;
+	
+    public LOGGER(String fileName) throws Exception {
+    	file_name = fileName;
+    	create_log_file();
+    }
+    private void create_log_file() throws Exception {
+    	File log = new File(System.getProperty("user.dir") + File.separator + file_name + ".log");
+    	log.createNewFile();
+    }
+
+}
